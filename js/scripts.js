@@ -41,6 +41,7 @@ async function getQuote() {
     quoteText.innerText =
       "Your time is limited, so don't waste it living someone else's life";
     authorText.innerText = " Steve Jobs";
+    removeLoadingSpinner();
   }
 }
 
