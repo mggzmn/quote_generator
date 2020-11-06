@@ -33,12 +33,14 @@ async function getQuote() {
     if (data.quoteText.length > 120) {
       quoteText.classList.add("long-quote");
     } else {
-      quoteText.classList.aremove("long-quote");
+      quoteText.classList.remove("long-quote");
     }
     quoteText.innerText = data.quoteText;
     removeLoadingSpinner();
   } catch (error) {
-    getQuote();
+    quoteText.innerText =
+      "Your time is limited, so don't waste it living someone else's life";
+    authorText.innerText = " Steve Jobs";
   }
 }
 
